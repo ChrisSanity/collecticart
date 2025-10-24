@@ -1,0 +1,26 @@
+MySQL queries done:
+
+CREATE TABLE products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  brand VARCHAR(100),
+  name VARCHAR(100),
+  price DECIMAL(10,2),
+  image VARCHAR(255) -- store the filename or path
+);
+
+ALTER TABLE products ADD COLUMN page VARCHAR(50);
+
+ALTER TABLE products 
+ADD COLUMN description TEXT,
+ADD COLUMN item_condition VARCHAR(50);
+
+ALTER TABLE products 
+ADD COLUMN availability ENUM('Available','Sold','In Transit') DEFAULT 'Available',
+ADD COLUMN stocks INT DEFAULT 0;
+
+ALTER TABLE `products` 
+ADD COLUMN `sale_price` DECIMAL(10,2) DEFAULT NULL AFTER `price`;
+
+christest - christest123
+admin_testing - admin_testingO422 - admin0422_testing
+testAdmin - awewa!test123 or admin1234
